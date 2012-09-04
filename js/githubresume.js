@@ -137,4 +137,4 @@ var run = function() {
     });
 };
 
-$(window).bind('error', function(e) { console.log(e); error(e); });
+$(window).bind('error', function(e) { console.log(e, urlParams); error(e); });
