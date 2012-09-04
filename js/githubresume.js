@@ -25,7 +25,7 @@ $(document).ready(function() {
     } 
 });
 
-var error = function() {
+var error = function(e) {
     $.ajax({
         url: 'views/error.html',
         dataType: 'html',
@@ -137,4 +137,4 @@ var run = function() {
     });
 };
 
-$(window).bind('error', error);
+$(window).bind('error', function(e) { console.log(e); error(e); });
